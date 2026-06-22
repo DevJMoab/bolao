@@ -3,7 +3,7 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { base44 } from "@/api/base44Client";
 import { useAuth } from "@/lib/AuthContext";
 import { motion } from "framer-motion";
-import { Target, Lock, Trophy, Medal, Save, Users } from "lucide-react";
+import { Target, Lock, Trophy, Save, Users } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -13,7 +13,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "@/components/ui/use-toast";
 import PageHeader from "@/components/ui/PageHeader";
 import SkeletonCard from "@/components/ui/SkeletonCard";
-import { getTeamInfo, isMatchLocked, isChampionPredictionLocked, calculatePredictionPoints, ALL_TEAMS_LIST } from "@/lib/copa-data";
+import { getTeamInfo, isMatchLocked, isChampionPredictionLocked, ALL_TEAMS_LIST } from "@/lib/copa-data";
 
 function PredictionCard({ match, prediction, onSave }) {
     const [homeScore, setHomeScore] = useState(prediction?.home_score_pred ?? "");

@@ -6,7 +6,7 @@ import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
 import { getTeamInfo, STAGE_LABELS } from "@/lib/copa-data";
 
-export default function MatchCard({ match, onClick, compact = false }) {
+export default function MatchCard({ match, onClick = () => {}, compact = false }) {
     const home = getTeamInfo(match.home_team);
     const away = getTeamInfo(match.away_team);
     const isLive = match.status === "live";

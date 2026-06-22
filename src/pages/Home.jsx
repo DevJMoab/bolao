@@ -33,7 +33,7 @@ export default function Home() {
     const liveMatches = matches.filter((m) => m.status === "live");
     const upcomingMatches = matches
         .filter((m) => m.status === "scheduled")
-        .sort((a, b) => new Date(a.kickoff_at) - new Date(b.kickoff_at))
+        .sort((a, b) => new Date(a.kickoff_at).getTime() - new Date(b.kickoff_at).getTime())
         .slice(0, 3);
     const recentMatches = matches
         .filter((m) => m.status === "finished")

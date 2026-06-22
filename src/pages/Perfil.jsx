@@ -1,19 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { useAuth } from "@/lib/AuthContext";
 import { base44 } from "@/api/base44Client";
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import { motion } from "framer-motion";
-import { User, Mail, Trophy, Target, Save, LogOut } from "lucide-react";
+import { User, Mail, Trophy, Target, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { toast } from "@/components/ui/use-toast";
+import { Card, CardContent } from "@/components/ui/card";
 import PageHeader from "@/components/ui/PageHeader";
 
 export default function Perfil() {
     const { user } = useAuth();
-    const queryClient = useQueryClient();
 
     const { data: standings = [] } = useQuery({
         queryKey: ["my-standing"],

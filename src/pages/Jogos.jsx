@@ -26,7 +26,7 @@ export default function Jogos() {
         return list.sort((a, b) => {
             if (a.status === "live" && b.status !== "live") return -1;
             if (b.status === "live" && a.status !== "live") return 1;
-            return new Date(a.kickoff_at) - new Date(b.kickoff_at);
+            return new Date(a.kickoff_at).getTime() - new Date(b.kickoff_at).getTime();
         });
     }, [matches, filter]);
 

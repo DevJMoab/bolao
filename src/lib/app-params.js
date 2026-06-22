@@ -10,7 +10,7 @@ const getAppParamValue = (paramName, { defaultValue = undefined, removeFromUrl =
     if (isNode) {
         return defaultValue;
     }
-    const storageKey = `base44_${toSnakeCase(paramName)}`;
+    const storageKey = `bolao_${toSnakeCase(paramName)}`;
     const urlParams = new URLSearchParams(window.location.search);
     const searchParam = urlParams.get(paramName);
     if (removeFromUrl) {
@@ -40,11 +40,11 @@ const getAppParams = () => {
         storage.removeItem('token');
     }
     return {
-        appId: getAppParamValue("app_id", { defaultValue: import.meta.env.VITE_BASE44_APP_ID }),
+        appId: getAppParamValue("app_id", { defaultValue: "bolao-app" }),
         token: getAppParamValue("access_token", { removeFromUrl: true }),
         fromUrl: getAppParamValue("from_url", { defaultValue: window.location.href }),
-        functionsVersion: getAppParamValue("functions_version", { defaultValue: import.meta.env.VITE_BASE44_FUNCTIONS_VERSION }),
-        appBaseUrl: getAppParamValue("app_base_url", { defaultValue: import.meta.env.VITE_BASE44_APP_BASE_URL }),
+        functionsVersion: getAppParamValue("functions_version", { defaultValue: "1.0.0" }),
+        appBaseUrl: getAppParamValue("app_base_url", { defaultValue: "/" }),
     }
 }
 
