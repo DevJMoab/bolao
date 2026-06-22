@@ -1,0 +1,84 @@
+{
+    "name": "Match",
+    "type": "object",
+    "properties": {
+        "stage": {
+            "type": "string",
+            "enum": [
+                "group",
+                "round_of_16",
+                "quarter_final",
+                "semi_final",
+                "third_place",
+                "final"
+            ],
+            "description": "Stage of the match"
+        },
+        "group_name": {
+            "type": "string",
+            "description": "Group letter (A-H) if group stage"
+        },
+        "match_number": {
+            "type": "number",
+            "description": "Match number in tournament"
+        },
+        "home_team": {
+            "type": "string",
+            "description": "Home team name"
+        },
+        "away_team": {
+            "type": "string",
+            "description": "Away team name"
+        },
+        "home_flag": {
+            "type": "string",
+            "description": "Home team flag emoji"
+        },
+        "away_flag": {
+            "type": "string",
+            "description": "Away team flag emoji"
+        },
+        "home_score": {
+            "type": "number",
+            "description": "Home team score"
+        },
+        "away_score": {
+            "type": "number",
+            "description": "Away team score"
+        },
+        "status": {
+            "type": "string",
+            "enum": [
+                "scheduled",
+                "live",
+                "finished",
+                "postponed"
+            ],
+            "default": "scheduled",
+            "description": "Match status"
+        },
+        "minute": {
+            "type": "string",
+            "description": "Current minute if live"
+        },
+        "kickoff_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Kickoff time"
+        },
+        "venue": {
+            "type": "string",
+            "description": "Stadium name"
+        },
+        "stats": {
+            "type": "object",
+            "description": "Match statistics JSON"
+        }
+    },
+    "required": [
+        "home_team",
+        "away_team",
+        "stage",
+        "kickoff_at"
+    ]
+}

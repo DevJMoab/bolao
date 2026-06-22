@@ -1,0 +1,45 @@
+{
+    "name": "Standing",
+    "type": "object",
+    "properties": {
+        "user_name": {
+            "type": "string",
+            "description": "User display name"
+        },
+        "user_avatar": {
+            "type": "string",
+            "description": "User avatar URL"
+        },
+        "total_points": {
+            "type": "number",
+            "default": 0,
+            "description": "Total points earned"
+        },
+        "exact_scores": {
+            "type": "number",
+            "default": 0,
+            "description": "Number of exact score predictions"
+        },
+        "correct_outcomes": {
+            "type": "number",
+            "default": 0,
+            "description": "Number of correct outcome predictions"
+        },
+        "champion_points": {
+            "type": "number",
+            "default": 0,
+            "description": "Points from champion prediction"
+        },
+        "runner_up_points": {
+            "type": "number",
+            "default": 0,
+            "description": "Points from runner-up prediction"
+        },
+        "rank_position": {
+            "type": "number",
+            "default": 0,
+            "description": "Rank in leaderboard"
+        }
+    },
+    "required": []
+}

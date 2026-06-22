@@ -1,0 +1,31 @@
+{
+    "name": "Prediction",
+    "type": "object",
+    "properties": {
+        "match_id": {
+            "type": "string",
+            "description": "Reference to match"
+        },
+        "home_score_pred": {
+            "type": "number",
+            "description": "Predicted home score"
+        },
+        "away_score_pred": {
+            "type": "number",
+            "description": "Predicted away score"
+        },
+        "points_earned": {
+            "type": "number",
+            "default": 0,
+            "description": "Points earned for this prediction"
+        },
+        "locked": {
+            "type": "boolean",
+            "default": false,
+            "description": "Whether prediction is locked"
+        }
+    },
+    "required": [
+        "match_id"
+    ]
+}

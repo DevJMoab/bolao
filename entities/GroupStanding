@@ -1,0 +1,67 @@
+{
+    "name": "GroupStanding",
+    "type": "object",
+    "properties": {
+        "group_name": {
+            "type": "string",
+            "description": "Group letter (A-H)"
+        },
+        "team_name": {
+            "type": "string",
+            "description": "Team name"
+        },
+        "team_flag": {
+            "type": "string",
+            "description": "Team flag emoji or URL"
+        },
+        "position": {
+            "type": "number",
+            "default": 0,
+            "description": "Position in group"
+        },
+        "played": {
+            "type": "number",
+            "default": 0,
+            "description": "Games played"
+        },
+        "won": {
+            "type": "number",
+            "default": 0,
+            "description": "Games won"
+        },
+        "drawn": {
+            "type": "number",
+            "default": 0,
+            "description": "Games drawn"
+        },
+        "lost": {
+            "type": "number",
+            "default": 0,
+            "description": "Games lost"
+        },
+        "goals_for": {
+            "type": "number",
+            "default": 0,
+            "description": "Goals scored"
+        },
+        "goals_against": {
+            "type": "number",
+            "default": 0,
+            "description": "Goals concededed"
+        },
+        "goal_diff": {
+            "type": "number",
+            "default": 0,
+            "description": "Goal difference"
+        },
+        "points": {
+            "type": "number",
+            "default": 0,
+            "description": "Total points"
+        }
+    },
+    "required": [
+        "group_name",
+        "team_name"
+    ]
+}

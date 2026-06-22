@@ -1,0 +1,40 @@
+{
+    "name": "TopScorer",
+    "type": "object",
+    "properties": {
+        "player_name": {
+            "type": "string",
+            "description": "Player name"
+        },
+        "team_name": {
+            "type": "string",
+            "description": "Team name"
+        },
+        "team_flag": {
+            "type": "string",
+            "description": "Team flag emoji or URL"
+        },
+        "goals": {
+            "type": "number",
+            "default": 0,
+            "description": "Goals scored"
+        },
+        "assists": {
+            "type": "number",
+            "default": 0,
+            "description": "Assists"
+        },
+        "appearances": {
+            "type": "number",
+            "default": 0,
+            "description": "Appearances"
+        },
+        "photo_url": {
+            "type": "string",
+            "description": "Player photo URL"
+        }
+    },
+    "required": [
+        "player_name"
+    ]
+}

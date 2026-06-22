@@ -1,0 +1,30 @@
+{
+    "name": "TournamentPrediction",
+    "type": "object",
+    "properties": {
+        "champion_team": {
+            "type": "string",
+            "description": "Predicted champion"
+        },
+        "runner_up_team": {
+            "type": "string",
+            "description": "Predicted runner-up"
+        },
+        "champion_points": {
+            "type": "number",
+            "default": 0,
+            "description": "Points for champion prediction"
+        },
+        "runner_up_points": {
+            "type": "number",
+            "default": 0,
+            "description": "Points for runner-up prediction"
+        },
+        "locked": {
+            "type": "boolean",
+            "default": false,
+            "description": "Whether prediction is locked"
+        }
+    },
+    "required": []
+}
